@@ -3419,7 +3419,7 @@ async function getNextSKU() {
   }).catch(() => {});
 
   const idx = newCounter - 1;
-  return `${skuLetters(Math.floor(idx / 100))}${(idx % 100) + 1}`;
+  return `${skuLetters(Math.floor(idx / 99))}${(idx % 99) + 1}`;
 }
 
 function showSkuField(sku) {
