@@ -1366,6 +1366,96 @@
       pointer-events:none; white-space:nowrap; user-select:none;
     }
     /* Brand center block */
+    /* ============================
+       RESEÑAS
+    ============================ */
+    .resenas-section {
+      background: var(--cream);
+      padding: 72px 2.5rem 80px;
+      border-top: 1px solid var(--border);
+    }
+    .resenas-wrap { max-width: 1100px; margin: 0 auto; }
+    .resenas-super {
+      font-family: var(--ff-body);
+      font-size: .6rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 8px;
+    }
+    .resenas-title {
+      font-family: var(--ff-head);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: .04em;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+      line-height: 1;
+    }
+    .resenas-track {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .resena-card {
+      background: var(--blush-light);
+      border: 1px solid var(--border);
+      padding: 24px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .resena-stars {
+      font-size: .9rem;
+      letter-spacing: .08em;
+      color: var(--rose);
+    }
+    .resena-text {
+      font-family: var(--ff-body);
+      font-size: .85rem;
+      line-height: 1.75;
+      color: var(--text-med);
+      flex: 1;
+    }
+    .resena-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .resena-name {
+      font-family: var(--ff-body);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: .04em;
+    }
+    .resena-loc {
+      font-size: .68rem;
+      color: var(--text-light);
+      letter-spacing: .08em;
+    }
+    @media (max-width: 768px) {
+      .resenas-section { padding: 48px 1.2rem 56px; }
+      .resenas-track {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+      }
+      .resenas-track::-webkit-scrollbar { display: none; }
+      .resena-card {
+        min-width: 260px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+      }
+    }
+
     .footer-brand { text-align:center; padding-bottom:56px; position:relative; }
     .footer-brand-icon { margin-bottom:18px; }
     .footer-brand-logo {
@@ -1948,6 +2038,71 @@ function cerrarApertura(){}
     <span class="hero-ticker-item">Moda Contemporánea</span>
   </div>
 </div>
+
+<!-- ========== RESEÑAS ========== -->
+<section class="resenas-section" id="resenasSection">
+  <div class="resenas-wrap">
+    <p class="resenas-super">Lo que dicen nuestros clientes</p>
+    <h2 class="resenas-title">Reseñas</h2>
+    <div class="resenas-track">
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Excelente calidad, la chamarra llegó perfecta y súper rápido. Ya le compré a toda mi familia aquí. 100% recomendado."</p>
+        <div class="resena-author">
+          <span class="resena-name">Karla M.</span>
+          <span class="resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Las blusas son hermosas y el precio es increíble comparado con otras tiendas. Ya soy cliente fija de DUBREM."</p>
+        <div class="resena-author">
+          <span class="resena-name">Sofía R.</span>
+          <span class="resena-loc">Tepejí del Río</span>
+        </div>
+      </article>
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Me encanta la atención, siempre muy amables. Los pantalones me quedaron perfectos. Definitivamente vuelvo."</p>
+        <div class="resena-author">
+          <span class="resena-name">Marisol G.</span>
+          <span class="resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Compré el deportivo y llegó tal cual en las fotos. Muy buena calidad, se nota que cuidan mucho sus productos."</p>
+        <div class="resena-author">
+          <span class="resena-name">Fernanda L.</span>
+          <span class="resena-loc">Atotonilco de Tula</span>
+        </div>
+      </article>
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★★</div>
+        <p class="resena-text">"Pedí varias prendas y todo llegó en perfectas condiciones. El servicio es de primera, muy rápidas en responder."</p>
+        <div class="resena-author">
+          <span class="resena-name">Daniela V.</span>
+          <span class="resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="resena-card">
+        <div class="resena-stars">★★★★☆</div>
+        <p class="resena-text">"Muy buenas prendas y precios justos. El envío fue rápido. Recomiendo seguirles en Facebook para ver las novedades."</p>
+        <div class="resena-author">
+          <span class="resena-name">Itzel H.</span>
+          <span class="resena-loc">Mixquiahuala</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 <!-- ========== FILTER BAR ========== -->
 <section class="filter-bar" id="catalogo">
@@ -4098,6 +4253,7 @@ function closeMobileNav(){ document.getElementById('mobileNav').classList.remove
 function showCatalog(section, pushHistory = true) {
   if (pushHistory) history.pushState({ section }, '', '#' + section);
   document.getElementById('inicio').style.display = 'none';
+  document.getElementById('resenasSection').style.display = 'none';
   document.querySelector('.filter-bar').classList.add('catalog-visible');
   document.querySelector('.products-section').classList.add('catalog-visible');
   document.querySelector('.footer').classList.add('catalog-visible');
@@ -4133,6 +4289,7 @@ function reintentarCarga() {
 function showHero() {
   clearInterval(_heroInterval);
   document.getElementById('inicio').style.display = '';
+  document.getElementById('resenasSection').style.display = '';
   document.querySelector('.filter-bar').classList.remove('catalog-visible');
   document.querySelector('.products-section').classList.remove('catalog-visible');
   document.querySelector('.footer').classList.remove('catalog-visible');
