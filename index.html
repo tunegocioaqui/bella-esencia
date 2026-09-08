@@ -3299,10 +3299,16 @@ function buildAdminCards() {
       return tb - ta;
     });
   } else if (_adminSort === 'sku_asc') {
+    const parseSKU = s => {
+      if (!s) return { l: 'ZZZ', n: 99999 };
+      const m = s.match(/^([A-Z]+)(\d+)$/);
+      return m ? { l: m[1], n: parseInt(m[2]) } : { l: 'ZZZ', n: 99999 };
+    };
     all = all.slice().sort((a, b) => {
-      const na = a.sku ? parseInt((a.sku.match(/\d+$/) || [0])[0]) : 99999;
-      const nb = b.sku ? parseInt((b.sku.match(/\d+$/) || [0])[0]) : 99999;
-      return na - nb;
+      const pa = parseSKU(a.sku), pb = parseSKU(b.sku);
+      if (pa.l.length !== pb.l.length) return pa.l.length - pb.l.length;
+      const lc = pa.l.localeCompare(pb.l);
+      return lc !== 0 ? lc : pa.n - pb.n;
     });
   } else if (_adminSort === 'price_asc') {
     all = all.slice().sort((a, b) => (a.price || 0) - (b.price || 0));
@@ -3361,9 +3367,6 @@ function renderAdminProducts() {
         <span style="font-size:.62rem;color:#888;letter-spacing:.1em;text-transform:uppercase;margin-right:4px;font-weight:600">Ordenar</span>
         ${sortBtns}
       </div>
-      <p style="font-size:.72rem;color:rgba(255,255,255,.45);margin-bottom:12px">
-        Toca un producto para editar su foto, precio o stock.
-      </p>
       <div class="admin-prods-grid" id="adminProdsGrid">${buildAdminCards()}</div>
     ` : `<p style="font-size:.8rem;color:rgba(255,255,255,.35);text-align:center;margin-top:40px">Aún no hay productos. ¡Agrega el primero!</p>`}
   `;
