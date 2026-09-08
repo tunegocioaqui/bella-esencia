@@ -1420,18 +1420,31 @@
     .footer-resena-name { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); letter-spacing: .04em; }
     .footer-resena-loc  { font-size: .62rem; color: rgba(255,255,255,.22); letter-spacing: .08em; }
     @media (max-width: 768px) {
-      .footer-resenas { margin-bottom: 32px; }
+      .footer-resenas { margin-bottom: 24px; }
+      .footer-resenas-title { font-size: 1.3rem; margin-bottom: 16px; }
       .footer-resenas-track {
         display: flex;
         overflow-x: auto;
-        gap: 10px;
+        gap: 8px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: 6px;
+        padding-bottom: 4px;
         scrollbar-width: none;
       }
       .footer-resenas-track::-webkit-scrollbar { display: none; }
-      .footer-resena-card { min-width: 230px; scroll-snap-align: start; flex-shrink: 0; }
+      .footer-resena-card {
+        min-width: 170px;
+        max-width: 170px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        padding: 11px 12px 10px;
+        gap: 7px;
+      }
+      .footer-resena-stars { font-size: .66rem; }
+      .footer-resena-text  { font-size: .68rem; line-height: 1.6; }
+      .footer-resena-name  { font-size: .64rem; }
+      .footer-resena-loc   { font-size: .56rem; }
+      .footer-resena-author { padding-top: 7px; }
     }
 
     .footer-brand { text-align:center; padding-bottom:56px; position:relative; }
