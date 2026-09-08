@@ -1367,93 +1367,71 @@
     }
     /* Brand center block */
     /* ============================
-       RESEÑAS
+       RESEÑAS (footer)
     ============================ */
-    .resenas-section {
-      background: var(--cream);
-      padding: 72px 2.5rem 80px;
-      border-top: 1px solid var(--border);
+    .footer-resenas {
+      max-width: 860px;
+      margin: 0 auto 52px;
     }
-    .resenas-wrap { max-width: 1100px; margin: 0 auto; }
-    .resenas-super {
-      font-family: var(--ff-body);
-      font-size: .6rem;
+    .footer-resenas-super {
+      font-size: .55rem;
       letter-spacing: .28em;
       text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 8px;
+      color: var(--rose-light);
+      margin-bottom: 6px;
     }
-    .resenas-title {
+    .footer-resenas-title {
       font-family: var(--ff-head);
       font-weight: 300;
       font-style: italic;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
       letter-spacing: .04em;
-      color: var(--text-dark);
-      margin-bottom: 40px;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 28px;
       line-height: 1;
     }
-    .resenas-track {
+    .footer-resenas-track {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
-    .resena-card {
-      background: var(--blush-light);
-      border: 1px solid var(--border);
-      padding: 24px 22px 22px;
+    .footer-resena-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      padding: 18px 16px 16px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
     }
-    .resena-stars {
-      font-size: .9rem;
-      letter-spacing: .08em;
-      color: var(--rose);
-    }
-    .resena-text {
-      font-family: var(--ff-body);
-      font-size: .85rem;
+    .footer-resena-stars { font-size: .78rem; letter-spacing: .1em; color: var(--rose-light); }
+    .footer-resena-text {
+      font-size: .78rem;
       line-height: 1.75;
-      color: var(--text-med);
+      color: rgba(255,255,255,.45);
       flex: 1;
     }
-    .resena-author {
+    .footer-resena-author {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border);
+      gap: 1px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,.07);
     }
-    .resena-name {
-      font-family: var(--ff-body);
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      letter-spacing: .04em;
-    }
-    .resena-loc {
-      font-size: .68rem;
-      color: var(--text-light);
-      letter-spacing: .08em;
-    }
+    .footer-resena-name { font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); letter-spacing: .04em; }
+    .footer-resena-loc  { font-size: .62rem; color: rgba(255,255,255,.22); letter-spacing: .08em; }
     @media (max-width: 768px) {
-      .resenas-section { padding: 48px 1.2rem 56px; }
-      .resenas-track {
+      .footer-resenas { margin-bottom: 32px; }
+      .footer-resenas-track {
         display: flex;
         overflow-x: auto;
-        gap: 12px;
+        gap: 10px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: 8px;
+        padding-bottom: 6px;
         scrollbar-width: none;
       }
-      .resenas-track::-webkit-scrollbar { display: none; }
-      .resena-card {
-        min-width: 260px;
-        scroll-snap-align: start;
-        flex-shrink: 0;
-      }
+      .footer-resenas-track::-webkit-scrollbar { display: none; }
+      .footer-resena-card { min-width: 230px; scroll-snap-align: start; flex-shrink: 0; }
     }
 
     .footer-brand { text-align:center; padding-bottom:56px; position:relative; }
@@ -2039,71 +2017,6 @@ function cerrarApertura(){}
   </div>
 </div>
 
-<!-- ========== RESEÑAS ========== -->
-<section class="resenas-section" id="resenasSection">
-  <div class="resenas-wrap">
-    <p class="resenas-super">Lo que dicen nuestros clientes</p>
-    <h2 class="resenas-title">Reseñas</h2>
-    <div class="resenas-track">
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Excelente calidad, la chamarra llegó perfecta y súper rápido. Ya le compré a toda mi familia aquí. 100% recomendado."</p>
-        <div class="resena-author">
-          <span class="resena-name">Karla M.</span>
-          <span class="resena-loc">Tula de Allende</span>
-        </div>
-      </article>
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Las blusas son hermosas y el precio es increíble comparado con otras tiendas. Ya soy cliente fija de DUBREM."</p>
-        <div class="resena-author">
-          <span class="resena-name">Sofía R.</span>
-          <span class="resena-loc">Tepejí del Río</span>
-        </div>
-      </article>
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Me encanta la atención, siempre muy amables. Los pantalones me quedaron perfectos. Definitivamente vuelvo."</p>
-        <div class="resena-author">
-          <span class="resena-name">Marisol G.</span>
-          <span class="resena-loc">Tula de Allende</span>
-        </div>
-      </article>
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Compré el deportivo y llegó tal cual en las fotos. Muy buena calidad, se nota que cuidan mucho sus productos."</p>
-        <div class="resena-author">
-          <span class="resena-name">Fernanda L.</span>
-          <span class="resena-loc">Atotonilco de Tula</span>
-        </div>
-      </article>
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Pedí varias prendas y todo llegó en perfectas condiciones. El servicio es de primera, muy rápidas en responder."</p>
-        <div class="resena-author">
-          <span class="resena-name">Daniela V.</span>
-          <span class="resena-loc">Tula de Allende</span>
-        </div>
-      </article>
-
-      <article class="resena-card">
-        <div class="resena-stars">★★★★☆</div>
-        <p class="resena-text">"Muy buenas prendas y precios justos. El envío fue rápido. Recomiendo seguirles en Facebook para ver las novedades."</p>
-        <div class="resena-author">
-          <span class="resena-name">Itzel H.</span>
-          <span class="resena-loc">Mixquiahuala</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
 <!-- ========== FILTER BAR ========== -->
 <section class="filter-bar" id="catalogo">
   <div class="section-wrap" style="text-align:center">
@@ -2662,6 +2575,71 @@ function cerrarApertura(){}
   </div>
 
   <hr class="footer-divider">
+
+  <!-- Reseñas -->
+  <div class="footer-resenas">
+    <p class="footer-resenas-super">Lo que dicen nuestros clientes</p>
+    <h2 class="footer-resenas-title">Reseñas</h2>
+    <div class="footer-resenas-track">
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★★</div>
+        <p class="footer-resena-text">"Excelente calidad, la chamarra llegó perfecta y súper rápido. Ya le compré a toda mi familia aquí. 100% recomendado."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Karla M.</span>
+          <span class="footer-resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★★</div>
+        <p class="footer-resena-text">"Las blusas son hermosas y el precio es increíble. Ya soy cliente fija de DUBREM."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Sofía R.</span>
+          <span class="footer-resena-loc">Tepejí del Río</span>
+        </div>
+      </article>
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★★</div>
+        <p class="footer-resena-text">"Me encanta la atención, siempre muy amables. Los pantalones me quedaron perfectos. Definitivamente vuelvo."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Marisol G.</span>
+          <span class="footer-resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★★</div>
+        <p class="footer-resena-text">"Compré el deportivo y llegó tal cual en las fotos. Muy buena calidad, se nota que cuidan mucho sus productos."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Fernanda L.</span>
+          <span class="footer-resena-loc">Atotonilco de Tula</span>
+        </div>
+      </article>
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★★</div>
+        <p class="footer-resena-text">"Pedí varias prendas y todo llegó en perfectas condiciones. El servicio es de primera, muy rápidas en responder."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Daniela V.</span>
+          <span class="footer-resena-loc">Tula de Allende</span>
+        </div>
+      </article>
+
+      <article class="footer-resena-card">
+        <div class="footer-resena-stars">★★★★☆</div>
+        <p class="footer-resena-text">"Muy buenas prendas y precios justos. El envío fue rápido. Recomiendo seguirles en Facebook."</p>
+        <div class="footer-resena-author">
+          <span class="footer-resena-name">Itzel H.</span>
+          <span class="footer-resena-loc">Mixquiahuala</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <hr class="footer-divider" style="margin-bottom:40px">
 
   <!-- Columnas -->
   <div class="footer-grid">
@@ -4253,7 +4231,6 @@ function closeMobileNav(){ document.getElementById('mobileNav').classList.remove
 function showCatalog(section, pushHistory = true) {
   if (pushHistory) history.pushState({ section }, '', '#' + section);
   document.getElementById('inicio').style.display = 'none';
-  document.getElementById('resenasSection').style.display = 'none';
   document.querySelector('.filter-bar').classList.add('catalog-visible');
   document.querySelector('.products-section').classList.add('catalog-visible');
   document.querySelector('.footer').classList.add('catalog-visible');
@@ -4289,7 +4266,6 @@ function reintentarCarga() {
 function showHero() {
   clearInterval(_heroInterval);
   document.getElementById('inicio').style.display = '';
-  document.getElementById('resenasSection').style.display = '';
   document.querySelector('.filter-bar').classList.remove('catalog-visible');
   document.querySelector('.products-section').classList.remove('catalog-visible');
   document.querySelector('.footer').classList.remove('catalog-visible');
