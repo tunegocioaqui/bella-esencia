@@ -3274,10 +3274,36 @@ function removeHero(cat, id) {
   fbSaveCatHero(cat, ids).then(() => renderAdminHeroes(cat));
 }
 
-function renderAdminProducts() {
-  const sec  = document.getElementById('adminProdsSection');
-  const all  = getMergedProducts().filter(p => !p.hidden);
-  const cards = all.map(p => {
+let _adminSort = 'newest';
+
+function sortAdminProducts(val) {
+  _adminSort = val;
+  document.querySelectorAll('.admin-sort-btn').forEach(b => {
+    b.style.background = b.dataset.sort === val ? 'var(--rose)' : 'rgba(255,255,255,.08)';
+    b.style.color      = b.dataset.sort === val ? '#fff'        : 'rgba(255,255,255,.5)';
+    b.style.borderColor= b.dataset.sort === val ? 'var(--rose)' : 'rgba(255,255,255,.12)';
+  });
+  const grid = document.getElementById('adminProdsGrid');
+  if (!grid) return;
+  grid.innerHTML = buildAdminCards();
+}
+
+function buildAdminCards() {
+  let all = getMergedProducts().filter(p => !p.hidden);
+
+  if (_adminSort === 'newest') {
+    all = all.slice().sort((a, b) => {
+      const ta = typeof a.id === 'string' && a.id.startsWith('new_') ? parseInt(a.id.replace('new_','')) : 0;
+      const tb = typeof b.id === 'string' && b.id.startsWith('new_') ? parseInt(b.id.replace('new_','')) : 0;
+      return tb - ta;
+    });
+  } else if (_adminSort === 'price_asc') {
+    all = all.slice().sort((a, b) => (a.price || 0) - (b.price || 0));
+  } else if (_adminSort === 'price_desc') {
+    all = all.slice().sort((a, b) => (b.price || 0) - (a.price || 0));
+  }
+
+  return all.map(p => {
     const imgSrc = p.img || '';
     const stkColor = p.stock === 0 ? 'color:#c0392b' : p.stock <= 5 ? 'color:#856404' : '';
     return `
@@ -3292,6 +3318,24 @@ function renderAdminProducts() {
         </div>
       </div>`;
   }).join('');
+}
+
+function renderAdminProducts() {
+  const sec = document.getElementById('adminProdsSection');
+  const all = getMergedProducts().filter(p => !p.hidden);
+
+  const sortBtns = [
+    { val:'newest',     label:'🕐 Más recientes' },
+    { val:'price_asc',  label:'↑ Precio: menor a mayor' },
+    { val:'price_desc', label:'↓ Precio: mayor a menor' },
+  ].map(s => `
+    <button class="admin-sort-btn" data-sort="${s.val}" onclick="sortAdminProducts('${s.val}')" style="
+      padding:6px 13px;border-radius:20px;border:1px solid;font-size:.65rem;
+      font-family:var(--ff-body);cursor:pointer;white-space:nowrap;transition:all .18s;
+      background:${_adminSort===s.val?'var(--rose)':'rgba(255,255,255,.08)'};
+      color:${_adminSort===s.val?'#fff':'rgba(255,255,255,.5)'};
+      border-color:${_adminSort===s.val?'var(--rose)':'rgba(255,255,255,.12)'};
+    ">${s.label}</button>`).join('');
 
   sec.innerHTML = `
     <div style="margin-bottom:20px">
@@ -3304,10 +3348,14 @@ function renderAdminProducts() {
       </button>
     </div>
     ${all.length ? `
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center">
+        <span style="font-size:.62rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-right:4px">Ordenar</span>
+        ${sortBtns}
+      </div>
       <p style="font-size:.72rem;color:rgba(255,255,255,.45);margin-bottom:12px">
         Toca un producto para editar su foto, precio o stock.
       </p>
-      <div class="admin-prods-grid">${cards}</div>
+      <div class="admin-prods-grid" id="adminProdsGrid">${buildAdminCards()}</div>
     ` : `<p style="font-size:.8rem;color:rgba(255,255,255,.35);text-align:center;margin-top:40px">Aún no hay productos. ¡Agrega el primero!</p>`}
   `;
 }
