@@ -1693,8 +1693,12 @@ function cerrarApertura(){}
         <a onclick="goToSection('mujer','all')">✦ Todos</a>
         <a onclick="goToSection('mujer','vestido')">Vestidos</a>
         <a onclick="goToSection('mujer','blusa')">Blusas</a>
+        <a onclick="goToSection('mujer','crop-top')">Crop Tops</a>
         <a onclick="goToSection('mujer','pantalon')">Pantalones</a>
+        <a onclick="goToSection('mujer','short')">Shorts</a>
         <a onclick="goToSection('mujer','chamarra')">Chamarras</a>
+        <a onclick="goToSection('mujer','sueter')">Suéteres</a>
+        <a onclick="goToSection('mujer','traje-bano')">Trajes de Baño</a>
       </div>
     </div>
     <!-- Hombre -->
@@ -1707,6 +1711,7 @@ function cerrarApertura(){}
         <a onclick="goToSection('hombre','camisa')">Camisas</a>
         <a onclick="goToSection('hombre','chamarra')">Chamarras</a>
         <a onclick="goToSection('hombre','pantalon')">Pantalones</a>
+        <a onclick="goToSection('hombre','short')">Shorts</a>
         <a onclick="goToSection('hombre','sueter')">Suéteres</a>
         <a onclick="goToSection('hombre','playera')">Playeras</a>
       </div>
@@ -1721,7 +1726,10 @@ function cerrarApertura(){}
         <a onclick="goToSection('ninos','playera')">Playeras</a>
         <a onclick="goToSection('ninos','chamarra')">Chamarras</a>
         <a onclick="goToSection('ninos','pantalon')">Pantalones</a>
+        <a onclick="goToSection('ninos','short')">Shorts</a>
         <a onclick="goToSection('ninos','vestido')">Vestidos</a>
+        <a onclick="goToSection('ninos','sueter')">Suéteres</a>
+        <a onclick="goToSection('ninos','traje-bano')">Trajes de Baño</a>
       </div>
     </div>
     <!-- Juvenil -->
@@ -1733,6 +1741,7 @@ function cerrarApertura(){}
         <a onclick="goToSection('juvenil','all')">✦ Todos</a>
         <a onclick="goToSection('juvenil','playera')">Playeras</a>
         <a onclick="goToSection('juvenil','pantalon')">Pantalones</a>
+        <a onclick="goToSection('juvenil','short')">Shorts</a>
         <a onclick="goToSection('juvenil','chamarra')">Chamarras</a>
         <a onclick="goToSection('juvenil','sudadera')">Sudaderas</a>
         <a onclick="goToSection('juvenil','jeans')">Jeans</a>
@@ -1751,6 +1760,58 @@ function cerrarApertura(){}
         <a onclick="goToSection('maternidad','pijama')">Pijamas</a>
         <a onclick="goToSection('maternidad','lactancia')">Lactancia</a>
         <a onclick="goToSection('maternidad','faja')">Fajas</a>
+      </div>
+    </div>
+    <!-- Bebé -->
+    <div class="sb-section">
+      <button class="sb-cat" onclick="toggleSidebarCat(this,'sub-bebe')">
+        <span>Bebé</span><span class="sb-arrow">›</span>
+      </button>
+      <div class="sb-sub" id="sub-bebe">
+        <a onclick="goToSection('bebe','all')">✦ Todos</a>
+        <a onclick="goToSection('bebe','bodies')">Bodies</a>
+        <a onclick="goToSection('bebe','pijama')">Pijamas</a>
+        <a onclick="goToSection('bebe','conjunto')">Conjuntos</a>
+        <a onclick="goToSection('bebe','ajuar')">Ajuares</a>
+      </div>
+    </div>
+    <!-- Calzado -->
+    <div class="sb-section">
+      <button class="sb-cat" onclick="toggleSidebarCat(this,'sub-calzado')">
+        <span>Calzado</span><span class="sb-arrow">›</span>
+      </button>
+      <div class="sb-sub" id="sub-calzado">
+        <a onclick="goToSection('calzado','all')">✦ Todos</a>
+        <a onclick="goToSection('calzado','tennis')">Tennis</a>
+        <a onclick="goToSection('calzado','sandalia')">Sandalias</a>
+        <a onclick="goToSection('calzado','bota')">Botas</a>
+        <a onclick="goToSection('calzado','casual')">Casual</a>
+      </div>
+    </div>
+    <!-- Lencería -->
+    <div class="sb-section">
+      <button class="sb-cat" onclick="toggleSidebarCat(this,'sub-lenceria')">
+        <span>Lencería</span><span class="sb-arrow">›</span>
+      </button>
+      <div class="sb-sub" id="sub-lenceria">
+        <a onclick="goToSection('lenceria','all')">✦ Todos</a>
+        <a onclick="goToSection('lenceria','bra')">Bras</a>
+        <a onclick="goToSection('lenceria','ropa-interior')">Ropa Interior</a>
+        <a onclick="goToSection('lenceria','pijama')">Pijamas</a>
+        <a onclick="goToSection('lenceria','corset')">Corsets</a>
+      </div>
+    </div>
+    <!-- Accesorios -->
+    <div class="sb-section">
+      <button class="sb-cat" onclick="toggleSidebarCat(this,'sub-accesorios')">
+        <span>Accesorios</span><span class="sb-arrow">›</span>
+      </button>
+      <div class="sb-sub" id="sub-accesorios">
+        <a onclick="goToSection('accesorios','all')">✦ Todos</a>
+        <a onclick="goToSection('accesorios','bolsa')">Bolsas</a>
+        <a onclick="goToSection('accesorios','cinturon')">Cinturones</a>
+        <a onclick="goToSection('accesorios','joyeria')">Joyería</a>
+        <a onclick="goToSection('accesorios','lentes')">Lentes</a>
       </div>
     </div>
   </nav>
@@ -1802,6 +1863,10 @@ function cerrarApertura(){}
     <a href="#catalogo" onclick="showCatalog('ninos');closeMobileNav()">Niños</a>
     <a href="#catalogo" onclick="showCatalog('juvenil');closeMobileNav()">Juvenil</a>
     <a href="#catalogo" onclick="showCatalog('maternidad');closeMobileNav()">Maternidad</a>
+    <a href="#catalogo" onclick="showCatalog('bebe');closeMobileNav()">Bebé</a>
+    <a href="#catalogo" onclick="showCatalog('calzado');closeMobileNav()">Calzado</a>
+    <a href="#catalogo" onclick="showCatalog('lenceria');closeMobileNav()">Lencería</a>
+    <a href="#catalogo" onclick="showCatalog('accesorios');closeMobileNav()">Accesorios</a>
   </nav>
 </header>
 
@@ -2360,6 +2425,10 @@ function cerrarApertura(){}
         <option value="ninos">Niños</option>
         <option value="juvenil">Juvenil</option>
         <option value="maternidad">Maternidad</option>
+        <option value="bebe">Bebé</option>
+        <option value="calzado">Calzado</option>
+        <option value="lenceria">Lencería</option>
+        <option value="accesorios">Accesorios</option>
       </select>
     </div>
     <!-- Sub-categoría -->
@@ -2449,6 +2518,10 @@ function cerrarApertura(){}
         <li><a href="#catalogo" onclick="showCatalog('ninos')">✦ Niños</a></li>
         <li><a href="#catalogo" onclick="showCatalog('juvenil')">✦ Juvenil</a></li>
         <li><a href="#catalogo" onclick="showCatalog('maternidad')">✦ Maternidad</a></li>
+        <li><a href="#catalogo" onclick="showCatalog('bebe')">✦ Bebé</a></li>
+        <li><a href="#catalogo" onclick="showCatalog('calzado')">✦ Calzado</a></li>
+        <li><a href="#catalogo" onclick="showCatalog('lenceria')">✦ Lencería</a></li>
+        <li><a href="#catalogo" onclick="showCatalog('accesorios')">✦ Accesorios</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -2789,18 +2862,26 @@ let _currentSection = null;    // mujer | hombre | ninos | null
 const COMING_SOON = new Set([]);
 
 const SECTION_TABS = {
-  mujer:      [['all','✦ Todos'],['vestido','Vestidos'],['blusa','Blusas'],['pantalon','Pantalones'],['chamarra','Chamarras'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['marca','Marca Exclusiva']],
-  hombre:     [['all','✦ Todos'],['camisa','Camisas'],['chamarra','Chamarras'],['pantalon','Pantalones'],['sueter','Suéteres'],['playera','Playeras'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['marca','Marca Exclusiva']],
-  ninos:      [['all','✦ Todos'],['playera','Playeras'],['chamarra','Chamarras'],['pantalon','Pantalones'],['vestido','Vestidos'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['marca','Marca Exclusiva']],
-  juvenil:    [['all','✦ Todos'],['playera','Playeras'],['pantalon','Pantalones'],['chamarra','Chamarras'],['sudadera','Sudaderas'],['deportiva','Deportivas'],['jeans','Jeans'],['marca','Marca Exclusiva']],
+  mujer:      [['all','✦ Todos'],['vestido','Vestidos'],['blusa','Blusas'],['crop-top','Crop Tops'],['pantalon','Pantalones'],['short','Shorts'],['chamarra','Chamarras'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['sueter','Suéteres'],['traje-bano','Trajes de Baño'],['marca','Marca Exclusiva']],
+  hombre:     [['all','✦ Todos'],['camisa','Camisas'],['chamarra','Chamarras'],['pantalon','Pantalones'],['short','Shorts'],['sueter','Suéteres'],['playera','Playeras'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['marca','Marca Exclusiva']],
+  ninos:      [['all','✦ Todos'],['playera','Playeras'],['chamarra','Chamarras'],['pantalon','Pantalones'],['short','Shorts'],['vestido','Vestidos'],['deportiva','Deportivas'],['sudadera','Sudaderas'],['sueter','Suéteres'],['traje-bano','Trajes de Baño'],['marca','Marca Exclusiva']],
+  juvenil:    [['all','✦ Todos'],['playera','Playeras'],['pantalon','Pantalones'],['short','Shorts'],['chamarra','Chamarras'],['sudadera','Sudaderas'],['deportiva','Deportivas'],['jeans','Jeans'],['marca','Marca Exclusiva']],
   maternidad: [['all','✦ Todos'],['top','Tops'],['pantalon','Pantalones'],['vestido','Vestidos'],['pijama','Pijamas'],['lactancia','Lactancia'],['faja','Fajas']],
+  bebe:       [['all','✦ Todos'],['bodies','Bodies'],['pijama','Pijamas'],['conjunto','Conjuntos'],['ajuar','Ajuares']],
+  calzado:    [['all','✦ Todos'],['tennis','Tennis'],['sandalia','Sandalias'],['bota','Botas'],['casual','Casual']],
+  lenceria:   [['all','✦ Todos'],['bra','Bras'],['ropa-interior','Ropa Interior'],['pijama','Pijamas'],['corset','Corsets']],
+  accesorios: [['all','✦ Todos'],['bolsa','Bolsas'],['cinturon','Cinturones'],['joyeria','Joyería'],['lentes','Lentes']],
 };
 const SUBCATS = {
-  mujer:      [['vestido','Vestido'],['blusa','Blusa'],['pantalon','Pantalón'],['chamarra','Chamarra'],['deportiva','Deportiva'],['sudadera','Sudadera'],['marca','Marca Exclusiva']],
-  hombre:     [['camisa','Camisa'],['chamarra','Chamarra'],['pantalon','Pantalón'],['sueter','Suéter'],['playera','Playera'],['deportiva','Deportiva'],['sudadera','Sudadera'],['marca','Marca Exclusiva']],
-  ninos:      [['playera','Playera'],['chamarra','Chamarra'],['pantalon','Pantalón'],['vestido','Vestido'],['deportiva','Deportiva'],['sudadera','Sudadera'],['marca','Marca Exclusiva']],
-  juvenil:    [['playera','Playera'],['pantalon','Pantalón'],['chamarra','Chamarra'],['sudadera','Sudadera'],['deportiva','Deportiva'],['jeans','Jeans'],['marca','Marca Exclusiva']],
+  mujer:      [['vestido','Vestido'],['blusa','Blusa'],['crop-top','Crop Top'],['pantalon','Pantalón'],['short','Short'],['chamarra','Chamarra'],['deportiva','Deportiva'],['sudadera','Sudadera'],['sueter','Suéter'],['traje-bano','Traje de Baño'],['marca','Marca Exclusiva']],
+  hombre:     [['camisa','Camisa'],['chamarra','Chamarra'],['pantalon','Pantalón'],['short','Short'],['sueter','Suéter'],['playera','Playera'],['deportiva','Deportiva'],['sudadera','Sudadera'],['marca','Marca Exclusiva']],
+  ninos:      [['playera','Playera'],['chamarra','Chamarra'],['pantalon','Pantalón'],['short','Short'],['vestido','Vestido'],['deportiva','Deportiva'],['sudadera','Sudadera'],['sueter','Suéter'],['traje-bano','Traje de Baño'],['marca','Marca Exclusiva']],
+  juvenil:    [['playera','Playera'],['pantalon','Pantalón'],['short','Short'],['chamarra','Chamarra'],['sudadera','Sudadera'],['deportiva','Deportiva'],['jeans','Jeans'],['marca','Marca Exclusiva']],
   maternidad: [['top','Top'],['pantalon','Pantalón'],['vestido','Vestido'],['pijama','Pijama'],['lactancia','Lactancia'],['faja','Faja']],
+  bebe:       [['bodies','Bodies'],['pijama','Pijama'],['conjunto','Conjunto'],['ajuar','Ajuar']],
+  calzado:    [['tennis','Tennis'],['sandalia','Sandalia'],['bota','Bota'],['casual','Casual']],
+  lenceria:   [['bra','Bra'],['ropa-interior','Ropa Interior'],['pijama','Pijama'],['corset','Corset']],
+  accesorios: [['bolsa','Bolsa'],['cinturon','Cinturón'],['joyeria','Joyería'],['lentes','Lentes']],
 };
 
 function renderSectionTabs(section) {
@@ -2824,7 +2905,7 @@ function renderSectionTabs(section) {
   const chevron = document.getElementById('filterDropdownChevron');
   if (chevron) chevron.style.transform = '';
   // Label de sección
-  const labels = { mujer:'Mujer', hombre:'Hombre', ninos:'Niños', juvenil:'Juvenil', maternidad:'Maternidad',};
+  const labels = { mujer:'Mujer', hombre:'Hombre', ninos:'Niños', juvenil:'Juvenil', maternidad:'Maternidad', bebe:'Bebé', calzado:'Calzado', lenceria:'Lencería', accesorios:'Accesorios' };
   const el = document.getElementById('sectionGenderLabel');
   if (el) el.textContent = labels[section] || '';
   // Sin hero banner para categorías próximamente
@@ -3941,8 +4022,17 @@ function togglePass(id, btn) {
 }
 function catLabel(c){
   return {
-    mujer:'Mujer',hombre:'Hombre',ninos:'Niños',juvenil:'Juvenil',maternidad:'Maternidad',outerwear:'Outerwear',bottoms:'Bottoms',sets:'Sets',
-    chamarra:'Chamarra',pantalon:'Pantalón',sueter:'Suéter',playera:'Playera',vestido:'Vestido',blusa:'Blusa'
+    mujer:'Mujer',hombre:'Hombre',ninos:'Niños',juvenil:'Juvenil',maternidad:'Maternidad',
+    bebe:'Bebé',calzado:'Calzado',lenceria:'Lencería',accesorios:'Accesorios',
+    outerwear:'Outerwear',bottoms:'Bottoms',sets:'Sets',
+    chamarra:'Chamarra',pantalon:'Pantalón',sueter:'Suéter',playera:'Playera',vestido:'Vestido',blusa:'Blusa',
+    'crop-top':'Crop Top',short:'Short','traje-bano':'Traje de Baño',
+    bodies:'Bodies',pijama:'Pijama',conjunto:'Conjunto',ajuar:'Ajuar',
+    tennis:'Tennis',sandalia:'Sandalia',bota:'Bota',casual:'Casual',
+    bra:'Bra','ropa-interior':'Ropa Interior',corset:'Corset',
+    bolsa:'Bolsa',cinturon:'Cinturón',joyeria:'Joyería',lentes:'Lentes',
+    deportiva:'Deportiva',sudadera:'Sudadera',marca:'Marca Exclusiva',jeans:'Jeans',
+    top:'Top',lactancia:'Lactancia',faja:'Faja',camisa:'Camisa',
   }[c]||c;
 }
 let _scrollLockCount = 0;
