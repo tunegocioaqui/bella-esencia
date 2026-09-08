@@ -2527,6 +2527,8 @@ function cerrarApertura(){}
     <div class="footer-col">
       <h4>Información</h4>
       <ul>
+        <li><a href="#" onclick="showInfoModal('nosotros');return false">Sobre nosotros</a></li>
+        <li><a href="#" onclick="showInfoModal('resenas');return false">Reseñas de clientes</a></li>
         <li><a href="#" onclick="showInfoModal('envio');return false">Políticas de envío</a></li>
         <li><a href="#" onclick="showInfoModal('devolucion');return false">Devoluciones</a></li>
         <li><a href="#" onclick="showInfoModal('faq');return false">Preguntas frecuentes</a></li>
@@ -2536,6 +2538,10 @@ function cerrarApertura(){}
       <h4>Contacto</h4>
       <a href="tel:+525563723284" class="footer-contact-num" style="color:#fff !important;-webkit-text-fill-color:#fff">+52 55 6372 3284</a>
       <p class="footer-contact-hrs">Lun – Vie &nbsp; 9:00 am – 5:00 pm<br><span style="color:rgba(196,86,106,.6)">Sáb y Dom no laboramos</span></p>
+      <a href="https://www.facebook.com/profile.php?id=100063654757816" target="_blank" rel="noopener" class="footer-whatsapp" style="margin-bottom:8px;background:#1877F2">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
       <a href="https://wa.me/525563723284" target="_blank" class="footer-whatsapp">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
@@ -3624,6 +3630,45 @@ const INFO_CONTENT = {
         <summary style="font-weight:700;color:var(--text-dark);cursor:pointer">¿Qué pasa si no envío el comprobante de pago?</summary>
         <p style="margin-top:8px">El pedido <strong>no se procesará</strong>. Sin comprobante de transferencia no podemos confirmar el pago, por lo que el pedido quedará en espera hasta recibirlo.</p>
       </details>
+    </div>`,
+  nosotros: `
+    <h2 style="font-family:var(--ff-head);font-weight:300;font-style:italic;font-size:1.9rem;letter-spacing:.04em;color:var(--text-dark);margin-bottom:4px">Sobre nosotros</h2>
+    <div style="width:32px;height:1px;background:var(--rose);margin-bottom:20px"></div>
+    <div style="display:flex;flex-direction:column;gap:16px;font-size:.88rem;line-height:1.85;color:var(--text-med)">
+      <p>DUBREM nació en el corazón de Tula de Allende, de la mano de <strong style="color:var(--text-dark)">Emilce, Dulce, Anel y Briseida</strong>, cuatro mujeres que se unieron con un mismo sueño: llevar ropa de calidad a cada familia.</p>
+      <p>Todo comenzó en plazas y mercados locales, donde poco a poco nos fuimos ganando la confianza de nuestros clientes, hasta convertirnos en parte de los hogares de Tula. Ese cariño y esa confianza nos permitieron crecer y expandir nuestro alcance a otros municipios cercanos.</p>
+      <p>Hoy seguimos guiados por la misma esencia con la que empezamos: ofrecer ropa de calidad al precio justo que nuestros clientes merecen. Y aunque hemos avanzado mucho, esto es solo el comienzo, porque en DUBREM sabemos que el cielo es el límite.</p>
+    </div>
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;gap:14px">
+      <a href="https://www.facebook.com/profile.php?id=100063654757816" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:#1877F2;color:#fff;text-decoration:none;font-family:var(--ff-body);font-size:.78rem;font-weight:500;letter-spacing:.06em;padding:10px 18px;border-radius:2px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Síguenos en Facebook
+      </a>
+    </div>`,
+  resenas: `
+    <h2 style="font-family:var(--ff-head);font-weight:300;font-style:italic;font-size:1.9rem;letter-spacing:.04em;color:var(--text-dark);margin-bottom:4px">Reseñas</h2>
+    <div style="width:32px;height:1px;background:var(--rose);margin-bottom:20px"></div>
+    <p style="font-size:.78rem;color:var(--text-light);margin-bottom:18px;letter-spacing:.04em">Lo que dicen nuestros clientes</p>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      ${[
+        { n:'Karla M.', t:'Tula de Allende', s:'★★★★★', r:'Excelente calidad, la chamarra llegó perfecta y súper rápido. Ya le compré a toda mi familia aquí. 100% recomendado.' },
+        { n:'Sofía R.', t:'Tepejí del Río', s:'★★★★★', r:'Las blusas son hermosas y el precio es increíble comparado con otras tiendas. Ya soy cliente fija de DUBREM.' },
+        { n:'Marisol G.', t:'Tula de Allende', s:'★★★★★', r:'Me encanta la atención, siempre muy amables. Los pantalones me quedaron perfectos. Definitivamente vuelvo.' },
+        { n:'Fernanda L.', t:'Atotonilco de Tula', s:'★★★★★', r:'Compré el deportivo y llegó tal cual en las fotos. Muy buena calidad, se nota que cuidan mucho sus productos.' },
+        { n:'Daniela V.', t:'Tula de Allende', s:'★★★★★', r:'Pedí varias prendas y todo llegó en perfectas condiciones. El servicio es de primera, muy rápidas en responder.' },
+        { n:'Itzel H.', t:'Mixquiahuala', s:'★★★★☆', r:'Muy buenas prendas y precios justos. El envío fue rápido. Recomiendo seguirles en Facebook para ver las novedades.' },
+      ].map(r => `
+        <div style="background:var(--blush-light);border-radius:2px;padding:14px 16px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+            <div>
+              <span style="font-weight:600;font-size:.83rem;color:var(--text-dark)">${r.n}</span>
+              <span style="font-size:.72rem;color:var(--text-light);margin-left:8px">${r.t}</span>
+            </div>
+            <span style="color:var(--rose);font-size:.78rem;letter-spacing:.04em">${r.s}</span>
+          </div>
+          <p style="font-size:.82rem;line-height:1.7;color:var(--text-med);margin:0">"${r.r}"</p>
+        </div>`).join('')}
     </div>`
 };
 
